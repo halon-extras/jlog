@@ -1,0 +1,22 @@
+[
+    {
+        "name": "jlogger",
+        "parameters": {
+            "required": [
+                {
+                    "name": "id",
+                    "type": "string"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        },
+        "returnType": "boolean or none",
+        "detail": "jlogger(string $id, string $data): boolean or none",
+        "value": "jlogger($0)",
+        "documentation": "Log data to a JLog message queue.",
+        "link": "[Full documentation](https://github.com/halon-extras/jlog)"
+    }
+] 

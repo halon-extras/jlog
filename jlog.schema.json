@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "JLog schema",
+    "additionalProperties": false,
+    "properties": {
+        "queues": {
+            "type": "array",
+            "uniqueItems": true,
+            "description": "JLog queues",
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "path",
+                    "subscribers"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "Queue ID"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Path of queue (on disk)"
+                    },
+                    "subscribers": {
+                        "type": "array",
+                        "description": "List of subscribers",
+                        "minItems": 1,
+                        "items": {
+                            "type": "string",
+                            "description": "Subscribers name"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
