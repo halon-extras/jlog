@@ -18,6 +18,7 @@ RUN apt-get install -y build-essential cmake curl autoconf file
 RUN mkdir /tmp/halon
 RUN cd /tmp/halon \
     && curl -O -L https://github.com/omniti-labs/jlog/archive/refs/tags/2.5.3.tar.gz \
+    && echo "66730afc62aa9c9f93ef686998a5396f8721edca3750097d4a2848a688d55bf9 2.5.3.tar.gz" | sha256sum -c \
     && tar -zxvf 2.5.3.tar.gz && cd jlog-2.5.3 \
     && autoconf && CFLAGS=-fPIC ./configure && make && make install \
     && mkdir -p /jlog && cp LICENSE /jlog/LICENSE
