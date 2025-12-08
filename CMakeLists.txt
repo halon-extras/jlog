@@ -68,6 +68,8 @@ INSTALL(FILES "${CMAKE_CURRENT_BINARY_DIR}/jlog.so.link" DESTINATION plugins/aut
 INSTALL(FILES "LICENSE" DESTINATION share/doc/plugins/jlog)
 INSTALL(FILES "/jlog/LICENSE" DESTINATION share/doc/plugins/jlog RENAME LICENSE.jlog)
 
+INSTALL(FILES "sbom.json" DESTINATION share/sbom/plugins RENAME ${PROJECT_NAME}.json)
+
 SET(CMAKE_INSTALL_PREFIX "/opt/halon")
 SET(CPACK_PACKAGING_INSTALL_PREFIX "/opt/halon")
 
